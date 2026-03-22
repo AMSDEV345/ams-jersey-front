@@ -1,16 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import products from "../data/products";
 import { leagues } from "../data/leagues";
 import ProductCard from "../components/ProductCard";
 
+const API_URL = "https://ams-jersey-city-production.up.railway.app/api/products";
+
 function Shop() {
   const [searchParams] = useSearchParams();
+  const [allProducts, setAllProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState(searchParams.get("search") || "");
   const [filter, setFilter] = useState("all");
   const [leagueFilter, setLeagueFilter] = useState("all");
 
-  const filtered = products.filter((p) =>
+  useEffect(() => {
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllProducts(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch products:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  const filtered = allProducts.filter((p) =>
     (filter === "all" || p.type === filter) &&
     (leagueFilter === "all" || p.category === leagueFilter) &&
     p.name.toLowerCase().includes(search.toLowerCase())
@@ -55,17 +71,25 @@ function Shop() {
         </div>
       </div>
 
-      <p style={S.count}>{filtered.length} jerseys found</p>
-
-      {filtered.length === 0 && (
-        <p style={S.empty}>No jerseys found. Try a different search or filter.</p>
+      {loading && (
+        <p style={{ textAlign: "center", color: "#c8a96e", padding: "80px 40px", fontFamily: "'Courier New', monospace", fontSize: 12, letterSpacing: "0.2em" }}>
+          Loading jerseys...
+        </p>
       )}
 
-      <div style={S.grid}>
-        {filtered.map((p) => (
-          <ProductCard key={p._id} product={p} />
-        ))}
-      </div>
+      {!loading && (
+        <>
+          <p style={S.count}>{filtered.length} jerseys found</p>
+          {filtered.length === 0 && (
+            <p style={S.empty}>No jerseys found. Try a different search or filter.</p>
+          )}
+          <div style={S.grid}>
+            {filtered.map((p) => (
+              <ProductCard key={p._id} product={p} />
+            ))}
+          </div>
+        </>
+      )}
 
     </div>
   );
