@@ -1,0 +1,45 @@
+.league-card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.league-card:hover {
+  transform: translateY(-5px);
+}
+
+/* LEAGUE HEADER */
+.league-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.league-header img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* TEAMS */
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.team {
+  background: #eee;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.team:hover {
+  background: gold;
+}

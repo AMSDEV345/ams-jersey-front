@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
+}
+
+/* SECTION TITLE */
+.section {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
