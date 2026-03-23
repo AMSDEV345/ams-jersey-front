@@ -1,4 +1,4 @@
-/* NAVBAR CONTAINER */
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -13,9 +13,10 @@
   background: rgba(10, 10, 10, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-/* LEFT SECTION */
+/* LEFT */
 .nav-left {
   display: flex;
   align-items: center;
@@ -35,7 +36,6 @@
 .logo img {
   width: 40px;
   height: 40px;
-  object-fit: contain;
 }
 
 .logo small {
@@ -66,9 +66,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: all 0.3s ease;
 }
 
-/* LINK STYLE */
 .nav-links a {
   text-decoration: none;
   color: #ddd;
@@ -84,7 +84,7 @@
   color: white;
 }
 
-/* ICON BUTTONS */
+/* ICON */
 .icon-btn {
   position: relative;
   font-size: 18px;
@@ -135,7 +135,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -152,9 +152,44 @@
     align-items: flex-start;
     display: none;
     margin-top: 10px;
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
   }
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search {
+    width: 180px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
   }
 }

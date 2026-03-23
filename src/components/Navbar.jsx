@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      
+
       {/* LEFT */}
       <div className="nav-left">
         <button
@@ -58,7 +58,6 @@ function Navbar() {
 
       {/* LINKS */}
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
         <Link to="/custom" onClick={() => setMenuOpen(false)}>Custom</Link>
@@ -74,10 +73,10 @@ function Navbar() {
           🛒
           {cartCount > 0 && <span className="badge">{cartCount}</span>}
         </Link>
-
       </div>
+
     </nav>
   );
 }
 
-export default Navbar;
+export default Navbar; 
