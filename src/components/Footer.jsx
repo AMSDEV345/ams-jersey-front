@@ -7,7 +7,7 @@ function Footer() {
 
         <div style={S.brand}>
           <h2 style={S.brandName}>AMS Jersey City</h2>
-          <p style={S.brandDesc}>Nigeria's number one jersey store. Official kits from the world's top clubs and national teams, delivered to your door.</p>
+          <p style={S.brandDesc}>Nigeria's finest jersey store. Official kits, retro classics, and premium streetwear — delivered nationwide.</p>
           <div style={S.socials}>
             <a href="https://www.instagram.com/amsdev00?igsh=MWUzczdhdjcwNjB5eg%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" style={S.socialIcon}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948 0-3.259-.014-3.668-.072-4.948-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -28,42 +28,26 @@ function Footer() {
         </div>
 
         <div style={S.col}>
-          <h4 style={S.colTitle}>Quick Links</h4>
-          <Link to="/" style={S.colLink}>Home</Link>
-          <Link to="/shop" style={S.colLink}>Shop</Link>
-          <Link to="/custom" style={S.colLink}>Custom Jersey</Link>
-          <Link to="/about" style={S.colLink}>About Us</Link>
-          <Link to="/contact" style={S.colLink}>Contact</Link>
-        </div>
-
-        <div style={S.col}>
           <h4 style={S.colTitle}>Customer Service</h4>
           <p style={S.colLink}>FAQ</p>
-          <p style={S.colLink}>Contact Support</p>
           <p style={S.colLink}>Privacy Policy</p>
           <p style={S.colLink}>Returns & Refunds</p>
           <p style={S.colLink}>Terms & Conditions</p>
         </div>
 
         <div style={S.col}>
-          <h4 style={S.colTitle}>Contact Us</h4>
-          <p style={S.colLink}>
-            <a href="mailto:adekunleolawale2405@gmail.com" style={S.link}>adekunleolawale2405@gmail.com</a>
-          </p>
-          <p style={S.colLink}>
-            <a href="tel:+2349160313567" style={S.link}>+234 916 031 3567</a>
-          </p>
-          <a href="https://wa.me/2349160313567" target="_blank" rel="noreferrer" style={S.whatsappBtn}>
-            Chat on WhatsApp
-          </a>
+          <h4 style={S.colTitle}>Contact</h4>
+          <a href="mailto:adekunleolawale2405@gmail.com" style={S.colLink}>adekunleolawale2405@gmail.com</a>
+          <a href="tel:+2349160313567" style={S.colLink}>+234 916 031 3567</a>
+          <a href="https://wa.me/2349160313567" target="_blank" rel="noreferrer" style={S.whatsappBtn}>Chat on WhatsApp</a>
         </div>
 
       </div>
 
       <div style={S.newsletter}>
-        <p style={S.newsletterText}>Subscribe for latest jerseys and offers</p>
+        <p style={S.newsletterText}>Subscribe for latest jerseys and exclusive offers</p>
         <div style={S.newsletterRow}>
-          <input type="email" placeholder="Enter your email" style={S.newsletterInput} />
+          <input type="email" placeholder="Your email address" style={S.newsletterInput} />
           <button style={S.newsletterBtn}>Subscribe</button>
         </div>
       </div>
@@ -77,25 +61,24 @@ function Footer() {
 }
 
 const S = {
-  footer: { background: "#0d0d0d", color: "#aaa", fontFamily: "'Georgia', serif", paddingTop: 60 },
-  top: { display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 40, padding: "0 40px 40px", borderBottom: "1px solid #1e1e1e", flexWrap: "wrap" },
-  brand: { display: "flex", flexDirection: "column", gap: 16 },
-  brandName: { color: "#fff", fontSize: 22, fontWeight: 900, margin: 0 },
-  brandDesc: { fontSize: 13, lineHeight: 1.7, color: "#666", margin: 0 },
-  socials: { display: "flex", gap: 12, marginTop: 8 },
-  socialIcon: { color: "#888", display: "flex", alignItems: "center", transition: "color 0.2s" },
+  footer: { background: "#050505", color: "#666", fontFamily: "'Georgia', serif", borderTop: "1px solid #141414" },
+  top: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 40, padding: "48px 24px 40px", borderBottom: "1px solid #141414" },
+  brand: { display: "flex", flexDirection: "column", gap: 14 },
+  brandName: { color: "#f0e6d3", fontSize: 18, fontWeight: 900, margin: 0 },
+  brandDesc: { fontSize: 13, lineHeight: 1.8, color: "#555", margin: 0 },
+  socials: { display: "flex", gap: 14, flexWrap: "wrap" },
+  socialIcon: { color: "#666", display: "flex", alignItems: "center", transition: "color 0.2s" },
   col: { display: "flex", flexDirection: "column", gap: 10 },
-  colTitle: { color: "#fff", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 8px" },
-  colLink: { fontSize: 13, color: "#666", margin: 0, textDecoration: "none" },
-  link: { color: "#888", textDecoration: "none" },
-  whatsappBtn: { display: "inline-block", marginTop: 8, padding: "8px 16px", background: "#25D366", color: "#fff", borderRadius: 4, textDecoration: "none", fontSize: 12, fontWeight: 700 },
-  newsletter: { padding: "32px 40px", borderBottom: "1px solid #1e1e1e", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap" },
-  newsletterText: { color: "#888", fontSize: 14, margin: 0 },
-  newsletterRow: { display: "flex", gap: 8 },
-  newsletterInput: { padding: "10px 16px", borderRadius: 4, border: "1px solid #333", background: "#111", color: "#fff", fontSize: 13, outline: "none", width: 240 },
-  newsletterBtn: { padding: "10px 20px", background: "#c8a96e", color: "#000", border: "none", borderRadius: 4, fontWeight: 700, fontSize: 13, cursor: "pointer" },
-  bottom: { padding: "20px 40px", textAlign: "center" },
-  copyright: { fontSize: 12, color: "#444", margin: 0 },
+  colTitle: { color: "#f0e6d3", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", margin: "0 0 6px", fontFamily: "'Courier New', monospace" },
+  colLink: { fontSize: 13, color: "#555", textDecoration: "none", margin: 0, lineHeight: 1.6 },
+  whatsappBtn: { display: "inline-block", marginTop: 6, padding: "8px 14px", background: "#25D366", color: "#fff", borderRadius: 3, textDecoration: "none", fontSize: 12, fontWeight: 700, alignSelf: "flex-start" },
+  newsletter: { padding: "24px", borderBottom: "1px solid #141414", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" },
+  newsletterText: { fontSize: 13, color: "#666", margin: 0 },
+  newsletterRow: { display: "flex", gap: 8, flexWrap: "wrap" },
+  newsletterInput: { padding: "10px 14px", background: "#0d0d0d", border: "1px solid #222", borderRadius: 3, color: "#f0e6d3", fontSize: 13, outline: "none", minWidth: 200, flex: 1 },
+  newsletterBtn: { padding: "10px 18px", background: "#c8a96e", color: "#000", border: "none", borderRadius: 3, fontWeight: 700, fontSize: 12, fontFamily: "'Courier New', monospace", cursor: "pointer", whiteSpace: "nowrap" },
+  bottom: { padding: "16px 24px", textAlign: "center" },
+  copyright: { fontSize: 11, color: "#333", margin: 0, fontFamily: "'Courier New', monospace" },
 };
 
 export default Footer;
